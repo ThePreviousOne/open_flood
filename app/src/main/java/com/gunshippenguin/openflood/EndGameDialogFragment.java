@@ -105,11 +105,7 @@ public class EndGameDialogFragment extends DialogFragment {
             }
         });
 
-        // Show the replay butotn if the game has been lost
         Button replayButton = (Button) layout.findViewById(R.id.replayButton);
-        if (gameWon) {
-            replayButton.setVisibility(View.GONE);
-        } else {
             replayButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -117,7 +113,6 @@ public class EndGameDialogFragment extends DialogFragment {
                     dismiss();
                 }
             });
-        }
 
         // Set up the new game button callback
         Button newGameButton = (Button) layout.findViewById(R.id.newGameButton);
